@@ -1,0 +1,14 @@
+.x {
+  color: firebrick;
+  position: relative;
+  top: -8px;
+  font-size: 4rem;
+  cursor: default;
+}
+.o {
+  color: forestgreen;
+  position: relative;
+  top: -8px;
+  font-size: 4rem;
+  cursor: default;
+}

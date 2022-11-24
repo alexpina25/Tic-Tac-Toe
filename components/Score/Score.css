@@ -1,0 +1,16 @@
+#stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3rem;
+  margin: 2% auto;
+  border-collapse: collapse;
+}
+
+.score-name {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+}

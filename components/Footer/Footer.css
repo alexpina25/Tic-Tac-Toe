@@ -1,0 +1,13 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8rem;
+    
+    gap: 2px;
+  }
+  
+  footer > div {
+    
+    gap: 1rem;
+  }
