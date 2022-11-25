@@ -5,4 +5,8 @@ body {
   text-align: center;
   font-family: "Indie Flower", "Comic Sans", cursive;
   font-size: 0.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

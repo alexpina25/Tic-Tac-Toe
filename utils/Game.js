@@ -1,4 +1,5 @@
 import { X, O } from "../components/X-O/X-O";
+import { WinMessage } from "../components/WinMessage/WinMessage";
 
 let counter = 0;
 
@@ -28,12 +29,10 @@ export const printCell = (cells) => {
           counter++;
           cell.innerHTML = O();
           oState.push(cell.id);
-          console.log(oState);
         } else {
           counter++;
           cell.innerHTML = X();
           xState.push(cell.id);
-          console.log(xState);
         }
       }
       winGame();
@@ -42,24 +41,24 @@ export const printCell = (cells) => {
 };
 
 const winGame = () => {
-  xState.sort(function (a, b) {
-    return a - b;
-  });
-  oState.sort(function (a, b) {
-    return a - b;
-  });
+  let xStat = sessionStorage.getItem("xStat");
+  let oStat = sessionStorage.getItem("oStat");
+  let drawStat = sessionStorage.getItem("drawStat");
 
   for (const win of winningStates) {
-    if (win === xState) {
-      console.log("Ganan X");
-    } else if (win === oState) {
-      console.log("Ganan O");
+    if (win.every((e) => xState.includes(e))) {
+      WinMessage("X");
+      xStat++;
+      sessionStorage.setItem("xStat", xStat);
+    } else if (win.every((e) => oState.includes(e))) {
+      WinMessage("O");
+      oStat++;
+      sessionStorage.setItem("oStat", oStat);
     } else if (counter === 9) {
-      console.log("Empate");
+      WinMessage("Draw");
+      drawStat++;
+      sessionStorage.setItem("drawStat", drawStat);
+      break;
     }
   }
 };
-
-const isEqual = () => {
-    
-}

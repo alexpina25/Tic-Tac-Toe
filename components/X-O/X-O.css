@@ -1,13 +1,11 @@
-.x {
+.X {
   color: firebrick;
-  position: relative;
   top: -8px;
   font-size: 4rem;
   cursor: default;
 }
-.o {
+.O {
   color: forestgreen;
-  position: relative;
   top: -8px;
   font-size: 4rem;
   cursor: default;

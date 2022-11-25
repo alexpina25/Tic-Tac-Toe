@@ -1,4 +1,4 @@
-import "./Board.css"
+import "./Board.css";
 
 export const Board = () => `
 <div id="game">
@@ -12,4 +12,4 @@ export const Board = () => `
 <div class="grid-cell" id="7"></div>
 <div class="grid-cell" id="8"></div>
 </div>
-`
+`;
